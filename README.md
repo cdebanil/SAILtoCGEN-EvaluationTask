@@ -1,4 +1,4 @@
-# SAIL to CGEN EvaluationTask
+# SAIL to CGEN Evaluation Task
 Using any programming language/environment of your choice, make a program that reads in structured data in form of tables and nested trees (e.g., JSON, YAML) using a fixed format/schema and produces an S-expression representation of the same data. For example, provided YAML from https://en.wikipedia.org/wiki/YAML#Example the output would be:
 ```
 ((yaml:receipt "Oz-Ware Purchase Invoice")
