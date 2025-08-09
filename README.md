@@ -9,3 +9,9 @@ Using any programming language/environment of your choice, make a program that r
 ...and so on...)
 ```
 The specification of input format (any variation of JSON/YAML would do) and output format (any LISP/Scheme dialect would do) but should be well-defined (you're free to select the description schema yourself), and the transformation steps should show adherence to the conversion semantics (you're free to select the way to enforce it).
+
+# Methodology 
+- used https://www.json.org/json-en.html as json specification.
+- strings are considered to be double-quoted, not single quoted, as per official json spec.
+- assuming that the names in the name:value pairs are unique.
+- storing numbers as string only.
