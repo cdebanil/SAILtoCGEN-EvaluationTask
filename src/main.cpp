@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
         Obj root = parse(input);
 
-        cout << "\n S-Expression - \n\n";
+        cout << "\n S-Expression for " << argv[i] << " - \n\n";
         printSexp(root);
     }
 

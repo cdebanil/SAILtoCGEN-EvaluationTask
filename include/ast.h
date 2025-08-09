@@ -1,6 +1,8 @@
 #ifndef AST_H
 #define AST_H
 
+// THIS FILE DEFINES THE ABSTRACT SNTAX TREE
+
 #include <string>
 #include <vector>
 #include <map>

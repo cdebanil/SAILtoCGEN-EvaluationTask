@@ -1,16 +1,18 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Iinclude  # -Iinclude tells compiler where headers are
+CXXFLAGS = -std=c++11 -Wall -Iinclude
 
 SOURCES = src/main.cpp src/helpers.cpp src/parser.cpp src/sexpr.cpp
-OBJECTS = $(SOURCES:.cpp=.o)
+OBJECTS = $(patsubst src/%.cpp, build/%.o, $(SOURCES))
 EXECUTABLE = bin/jsontosexp
 
 all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
+	@mkdir -p bin
 	$(CXX) $(OBJECTS) -o $@
 
-%.o: %.cpp
+build/%.o: src/%.cpp
+	@mkdir -p build
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
